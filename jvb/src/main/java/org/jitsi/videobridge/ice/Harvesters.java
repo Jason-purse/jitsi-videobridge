@@ -21,13 +21,20 @@ import org.jitsi.utils.logging2.*;
 
 import java.io.*;
 import java.util.*;
-
+/**
+ * @author JASONJ
+ * @date 2022/6/26
+ * @time 22:28
+ * @description jvb 的 peer 收集器。。。
+ **/
 public class Harvesters
 {
     /**
      * The flag which indicates whether application-wide harvesters, stored
      * in the static fields {@link #tcpHarvester} and
      * {@link #singlePortHarvesters} have been initialized.
+     *
+     * 这个标志指示是否一个应用端的收集器存储在静态字段 tcpHarvester中并且 singlePortHaversters 已经初始化 ..
      */
     private static boolean staticConfigurationInitialized = false;
 
@@ -35,6 +42,9 @@ public class Harvesters
      * Global variable do we consider this transport manager as healthy.
      * By default we consider healthy, if we fail to bind to the single port
      * port we consider the bridge as unhealthy.
+     *
+     * 全局变量 - 我们认为传输管理器是健康的 ..
+     * 默认我们认为是健康的 ... 如果我们失败去绑定单个端口 - 那么考虑为不健康的 ...
      */
     private static boolean healthy = true;
 
